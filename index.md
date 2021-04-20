@@ -16,7 +16,7 @@ In particular, VulScope runs in the following steps:
 - Step-5: VulScope uses fuzzing-based detours correction to mutate the input bytes that are related to the critical variables.
 - Step-6: All the mutated inputs are evaluated with the crash triage and given scores based on the similarity between their traces and *T<sub>ref</sub>*. If none of the seeds triggers the target vulnerability, they are inserted into a prioritization queue according to their scores. The seed with the highest score will be selected for next round of mutation (goto Step-4).
 
-<img src="Figure-1.jpg" alt="0001" style="zoom:50%;" />
+<img src="Figure-1.jpg" alt="0001" style="zoom:50%;" div align=center/>
 
 <center><b>Figure 1: System Overview for PoC Migration</b></center>
 
