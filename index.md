@@ -9,14 +9,14 @@ Recent research shows that, even for vulnerability reports archivedby MITRE/NIST
 Following the above key ideas, we design VulScope to facilitate the assessment of vulnerable versions. The overall architecture of VulScope is presented in Figure 1, consisting of two main modules that implement our key techniques respectively. Overall speaking, VulScope takes a PoC that triggers a vulnerability on the reference version as input, and tests whether another version of the same software is also vulnerable to this vulnerability. To confirm the vulnerability,VulScope should generate a new PoC that can indeed trigger the same vulnerability on the specified version. Our core idea is to adopt a trace-aware fuzzing method that continuously adjusts the given PoC, and make the target version of the software follow a similar path to that observed on the reference version under the new input. Following this way, intuition suggests that we have a higher chance to generate a new PoC that triggers the same vulnerability on the target version. 
 
 In particular, VulScope runs in the following steps:
-- Step-1: VulScope collects ***T<sub>ref</sub>***  and ***T<sub>target</sub>*** with the given PoC on the reference version and the target version, respectively.
-- Step-2: VulScope performs cross-version trace alignmenton ***T<sub>ref</sub>*** and ***T<sub>target</sub>*** to get the aligned functions between the two traces.
+- Step-1: VulScope collects *T<sub>ref</sub>*  and *T<sub>target</sub>* with the given PoC on the reference version and the target version, respectively.
+- Step-2: VulScope performs cross-version trace alignmenton *T<sub>ref</sub>* and *T<sub>target</sub>* to get the aligned functions between the two traces.
 - Step-3: If a crash is observed on the target version, VulScope uses crash triage to verify whether this crash is triggered by the target vulnerability.
 - Step-4: Based on the aligned cross-version execution traces, VulScope performs execution detours reasoning to locate the critical variables that cause these execution detours.
 - Step-5: VulScope uses fuzzing-based detours correction to mutate the input bytes that are related to the critical variables.
-- Step-6: All the mutated inputs are evaluated with the crash triage and given scores based on the similarity between their traces and ***T<sub>ref</sub>***. If none of the seeds triggers the target vulnerability, they are inserted into a prioritization queue according to their scores. The seed with the highest score will be selected for next round of mutation (goto Step-4).
+- Step-6: All the mutated inputs are evaluated with the crash triage and given scores based on the similarity between their traces and *T<sub>ref</sub>*. If none of the seeds triggers the target vulnerability, they are inserted into a prioritization queue according to their scores. The seed with the highest score will be selected for next round of mutation (goto Step-4).
 
-<img src="https://github.com/seclab-fudan/VulScope/blob/gh-pages/Figure-1.jpg" alt="0001" style="zoom:50%;" />
+<img src="Figure-1.jpg" alt="0001" style="zoom:50%;" />
 
 <center><b>Figure 1: System Overview for PoC Migration</b></center>
 
@@ -28,7 +28,7 @@ In particular, VulScope runs in the following steps:
 
 ## Research Paper
 
-[</u>ACM CCS 2021</u>] **Facilitating Vulnerability Assessment through PoC Migration**
+[<u>ACM CCS 2021</u>] **Facilitating Vulnerability Assessment through PoC Migration**
 
 *Jiarun Dai, Yuan Zhang, Hailong Xu, Haiming Lyu, Zicheng Wu, Xinyu Xing, Min Yang.*
 
