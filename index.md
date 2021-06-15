@@ -3,6 +3,8 @@ layout: default
 title: VulScope
 ---
 
+# VulScope
+
 ## Research Problem
 
 A public vulnerability report usually contains vulnerable software versions, the severity of the vulnerability, and even the Proof-of-Concept (PoC) input to  reproduce  the  failure  pertaining  to  the  vulnerability. Recent research<sup>[[1,2,3]](#reference)</sup> shows that incomplete and incorrect vulnerable software versions are prevalent in vulnerability reports, making users of under-reported vulnerable versions at risk. Existing techniques such as code clone detection and patch presence testing could potentially be applied to verifying a vulnerability on different software versions. However, these static analysis techniques might generate high false positives because they cannot confirm the existence of the vulnerability through a PoC that triggers the target vulnerability and forces the program to accidentally terminate. 
