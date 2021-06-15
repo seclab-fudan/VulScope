@@ -1,3 +1,8 @@
+---
+layout: default
+title: Vulscope
+---
+
 ## Abstract
 
 Recent research shows that, even for vulnerability reports archivedby MITRE/NIST, they usually contain incomplete information aboutthe software’s vulnerable versions, making users of under-reported vulnerable versions at risk. In this work, we address this problemby introducing a fuzzing-based method. Technically, this approach first collects the crashing trace on the reference version of the software. Then, it utilizes the trace to guide the mutation of the PoC input so that the target version could follow the trace similar to the one observed on the reference version. Under the mutated input, we argue that the target version’s execution could have a higher chance of triggering the bug and demonstrating thevulnerability’s existence. We implement this idea as an automatedtool, named **VulScope**. Using 30 real-world CVEs on 470 versions of software, VulScope is demonstrated to introduce no false positives and only 7.9% false negative while migrating PoC from one version to another. Besides, we also compare our method with two representative fuzzing tools AFL and AFLGO. We find VulScope outperforms both of these existing techniques while taking the task of PoC migration. Finally, by using VulScope, we identify 330 versions of software that MITRE/NIST fails to report as vulnerable.
