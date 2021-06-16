@@ -44,11 +44,11 @@ In particular, VulScope runs in the following steps:
 
 To appear in the 28th ACM Conference on Computer and Communications Security (CCS), Seoul, South Korea, November 14-19, 2021 (coming soon).
 
+## Citation
 
+(coming soon)
 
 ## Open Source Protocol
-
-> This protocol is referenced from [Android Malware Genome Project](http://www.malgenomeproject.org/policy.html)
 
 In order to further complement the incomplete vulnerability reports in existing vulnerability databases (e.g. MITRE) and to make them better understood and implemented by the research community, we are pleased to release our tool VulScope and dataset to the community. However, in order to avoid misuse of our tool and dataset, we feel that some sort of authentication is necessary to verify the identity of the user or to require the necessary justification, rather than making the dataset fully public. For this reason, if you are interested in obtaining access to our datasets, please read the following instructions carefully before sending us an email.
 
@@ -71,12 +71,11 @@ Please send your request emails to Yuan Zhang (yuanxzhang@fudan.edu.cn) AND Dr. 
 
 
 
-
 ## Dataset
 
-We randomly selected 30 real-world CVE reports from the National Vulnerability Database (NVD). These 30 CVE reports cover 6 broadly adopted software  in  the  user space,  covering  6  types  of  vulnerabilities: heap OOB, stack OOB, divide-by-zero, segmentation fault, integer overflow, and null pointer dereference. To evaluate our tool, we choose 500 unpatched versions listed in Table 1, consisting of 30 reference versions and 470 target versions.
+When evaluating the performance of VulScope, we randomly selected 30 real-world CVE reports from the National Vulnerability Database (NVD). These 30 CVEs influence 6 broadly adopted software  in  the  user space,  covering  6  types  of  vulnerabilities: heap OOB, stack OOB, divide-by-zero, segmentation fault, integer overflow, and null pointer dereference. As shown in the following table, the dataset consists of 30 reference CVE-version pairs and 470 target CVE-version pairs.
 
-We also prepared the necessary binaries for testing our tool in this dataset and we will publish them in a [zenodo repository](). 
+We plan to open source this dataset, containing the inputs needed by VulScope to run tests on these CVE-version pairs. Following our sharing protocol, you can get the dataset in a public [zenodo repository](). 
 
 <div align="center">
 <img src="./img/image-20210611233459167.png" style="zoom:50%;" />
@@ -85,8 +84,7 @@ We also prepared the necessary binaries for testing our tool in this dataset and
 
 ## Source Code
 
-We will make the source code of all modules of VulScope publicly available.We also provide two dockers, one for compiling the necessary binaries and the other for using our tool VulScope. you can find them [here]().
-
+We also plan to make the source code of all modules of VulScope publicly available. For ease of use, we also provide the docker images in which you can directly run our tool. You can get the source code and docker images from a public [zenodo repository](), following our sharing policy.
 
 
 ## Team Members
