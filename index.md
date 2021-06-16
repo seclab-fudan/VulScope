@@ -78,7 +78,7 @@ When evaluating the performance of VulScope, we randomly selected 30 real-world 
 We plan to open source this dataset, containing the inputs needed by VulScope to run tests on these CVE-version pairs. Following our sharing protocol, you can get the dataset in a public [zenodo repository](). 
 
 <div align="center">
-<img src="./img/image-20210611233459167.png" style="zoom:50%;" />
+<img src="./img/image-20210616.png" style="zoom:50%;" />
 </div>
 
 
