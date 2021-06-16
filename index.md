@@ -47,7 +47,7 @@ To appear in the 28th ACM Conference on Computer and Communications Security (CC
 ## Citation
 ```
 @inproceedings{vulscope-CCS-2021,
-    author={Y. Zhang and J. Dai and X. Zhang and S. Huang and Z. Yang and M. Yang and H. Chen}, 
+    author={J. Dai and Y. Zhang and H. Xu and H. Lyu and Z. Wu and X. Xing and M. Yang},
     booktitle={Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security},
     title={Facilitating Vulnerability Assessment through PoC Migration},
     year={2021},
