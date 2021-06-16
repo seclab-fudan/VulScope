@@ -54,19 +54,19 @@ Recent research shows that, public vulnerability reports (e.g., those achieved b
 
 **=======  Instructions about Request Email =======**
 
-### For Academic Researchers:
+**For Academic Researchers:**
 If you are a student(or postdoc), please have your advisor (or host) send us an access email. If you are a faculty member, please send us an email from your university email account.
 
 In your email, please include your name, affiliation, and home page (if we do not recognize each other). This information is required only for verification purposes. Please note that if we are unable to determine your identity or affiliation, your request may be ignored.
 
 If your papers or articles use our dataset or our tool, please cite our CCS 2021 paper.
 
-## For Industry Researchers:
+**For Industry Researchers:**
 If you are currently in industry (including research labs), please send us an email from your company's email account.
 
 In the email, please briefly introduce yourself (e.g., name and title - in case we don't know each other) and your company.
 
-## Mail Content:
+**Mail Content:**
 In the email, please include a justification letter (PDF format) on official letterhead. The justification letter needs to acknowledge the "VulScope" project from Fudan University and clearly state the reason for requesting the dataset or source code. Also, confirm that the dataset or source code will not be shared with others without our permission.
 
 
