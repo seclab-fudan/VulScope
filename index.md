@@ -7,9 +7,11 @@ title: VulScope
 
 ## Research Problem
 
-A public vulnerability report usually contains vulnerable software versions, the severity of the vulnerability, and even the Proof-of-Concept (PoC) input to  reproduce  the  failure  pertaining  to  the  vulnerability. Recent research<sup>[[1,2,3]](#reference)</sup> shows that incomplete and incorrect vulnerable software versions are prevalent in vulnerability reports, making users of under-reported vulnerable versions at risk. Existing techniques such as code clone detection and patch presence testing could potentially be applied to verifying a vulnerability on different software versions. However, these static analysis techniques might generate high false positives because they cannot confirm the existence of the vulnerability through a PoC that triggers the target vulnerability and forces the program to accidentally terminate. 
+A public vulnerability report usually contains vulnerable software versions, the severity of the vulnerability, and even the Proof-of-Concept (PoC) input to  reproduce  the  failure  pertaining  to  the  vulnerability. However, recent research<sup>[[1,2,3]](#reference)</sup> shows that incomplete and incorrect vulnerable software versions are prevalent in vulnerability reports, making users of under-reported vulnerable versions at risk. 
 
-In this work, we introduce a systematic, automated approach to assessing the under-claimed vulnerable versions for a reported vulnerability. Technically, taking a PoC for the reference vulnerable version as input, we utilize a fuzzing-based method to generate a new PoC for the target version to trigger the same vulnerability. We implement this idea as an automated tool, named VulScope. Using 30 real-world CVEs, VulScope successfully identify **330**
+Existing techniques such as code clone detection and patch presence testing could potentially be applied to verifying a vulnerability on different software versions. However, these static analysis techniques might generate high false positives because they cannot confirm the existence of the vulnerability through a PoC that triggers the target vulnerability.
+
+In this work, we introduce a systematic, automated approach to assessing the under-reported vulnerable versions for a reported vulnerability. Technically, taking a PoC for the reference vulnerable version as input, we utilize a fuzzing-based method to generate a new PoC for the target version to trigger the same vulnerability. We implement this idea as an automated tool, named VulScope. On 30 real-world CVEs, VulScope successfully identify **330**
 versions of software that MITRE/NIST fails to report as vulnerable.
 
 We plan to release the source code and datasets of VulScope, see [our sharing policy](#open-source-protocol) for more details.
@@ -24,7 +26,7 @@ In particular, VulScope runs in the following steps:
 
 2. VulScope performs cross-version trace alignmenton *T<sub>ref</sub>* and *T<sub>target</sub>* to get the aligned functions between the two traces.
 
-3. If a crash is observed on the target version, VulScope uses **crash triage** to verify whether this crash is triggered by the target vulnerability.
+3. If a crash is observed on the target version, VulScope uses crash triage to verify whether this crash is triggered by the target vulnerability.
 
 4. Based on the aligned cross-version execution traces, VulScope performs execution detours reasoning to locate the critical variables that cause these execution detours.
 
