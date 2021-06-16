@@ -14,7 +14,7 @@ Existing techniques such as code clone detection and patch presence testing coul
 In this work, we introduce a systematic, automated approach to assessing the under-reported vulnerable versions for a reported vulnerability. Technically, taking a PoC for the reference vulnerable version as input, we utilize a fuzzing-based method to generate a new PoC for the target version to trigger the same vulnerability. We implement this idea as an automated tool, named VulScope. On 30 real-world CVEs, VulScope successfully identify **330**
 versions of software that MITRE/NIST fails to report as vulnerable.
 
-We plan to release the source code and datasets of VulScope, see [our sharing policy](#open-source-protocol) for more details.
+We plan to release the [source code](#source-code) and [datasets](#dataset) of VulScope, see [our sharing policy](#open-source-protocol) for more details.
 
 ## Approach Overview
 
