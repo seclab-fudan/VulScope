@@ -34,7 +34,7 @@ In particular, VulScope runs in the following steps:
 
 6. All the mutated inputs are evaluated with the crash triage and given scores based on the similarity between their traces and *Tref*. If none of the seeds triggers the target vulnerability, they are inserted into a prioritization queue according to their scores. The seed with the highest score will be selected for next round of mutation (goto Step-4).
 
-![image-20210615153253528](./img/image-20210615153253528.png)
+![image-20210615153253528](./img/overview-210616.png)
 
 ## Paper Info
 
