@@ -3,7 +3,7 @@ layout: default
 title: VulScope
 ---
 
-# VulScope: Facilitating Vulnerability Assessment through PoC Migration
+## VulScope: Facilitating Vulnerability Assessment through PoC Migration
 
 ## Research Problem
 
@@ -45,9 +45,14 @@ In particular, VulScope runs in the following steps:
 To appear in the 28th ACM Conference on Computer and Communications Security (CCS), Seoul, South Korea, November 14-19, 2021 (coming soon).
 
 ## Citation
-
-(coming soon)
-
+```
+@inproceedings{vulscope-CCS-2021,
+    author={Y. Zhang and J. Dai and X. Zhang and S. Huang and Z. Yang and M. Yang and H. Chen}, 
+    booktitle={Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security},
+    title={Facilitating Vulnerability Assessment through PoC Migration},
+    year={2021},
+}
+```
 ## Open Source Protocol
 
 Recent research shows that, public vulnerability reports (e.g., those achieved by MITRE/NIST) usually contain incomplete information about the software's vulnerable versions, making users of under-reported vulnerable versions at risk. In light of this, we are glad to release our tool VulScope and dataset for vulnerability assessment to the community, to better understand or mitigate this problem. However, to avoid misuse of our tool and dataset, we apply simple authentication to verify the identity of the user who wants to request access to our source code and dataset. So, if you are interested in VulScope and want to obtain access to our source code and dataset, please read the following instructions and send your request email to Yuan Zhang (yuanxzhang@fudan.edu.cn) and Jiarun Dai (jrdai14@fudan.edu.cn).
