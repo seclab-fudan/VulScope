@@ -50,24 +50,27 @@ To appear in the 28th ACM Conference on Computer and Communications Security (CC
 
 ## Open Source Protocol
 
-In order to further complement the incomplete vulnerability reports in existing vulnerability databases (e.g. MITRE) and to make them better understood and implemented by the research community, we are pleased to release our tool VulScope and dataset to the community. However, in order to avoid misuse of our tool and dataset, we feel that some sort of authentication is necessary to verify the identity of the user or to require the necessary justification, rather than making the dataset fully public. For this reason, if you are interested in obtaining access to our datasets, please read the following instructions carefully before sending us an email.
+Recent research shows that, public vulnerability reports (e.g., those achieved by MITRE/NIST) usually contain incomplete information about the software's vulnerable versions, making users of under-reported vulnerable versions at risk. In light of this, we are glad to release our tool VulScope and dataset for vulnerability assessment to the community, to better understand or mitigate this problem. However, to avoid misuse of our tool and dataset, we apply simple authentication to verify the identity of the user who wants to request access to our source code and dataset. So, if you are interested in VulScope and want to obtain access to our source code and dataset, please read the following instructions and send your request email to Yuan Zhang (yuanxzhang@fudan.edu.cn) and Jiarun Dai (jrdai14@fudan.edu.cn).
 
-1. If you are currently in academia:
+**=======  Instructions about Request Email =======**
 
-   If you are a student (or postdoc), please have your advisor (or host) send us an access email. If you are a faculty member, please send us an email from your university email account.
+### For Academic Researchers:
+If you are a student(or postdoc), please have your advisor (or host) send us an access email. If you are a faculty member, please send us an email from your university email account.
 
-   In your email, please include your name, affiliation, and home page (if we do not recognize each other). This information is required only for verification purposes. Please note that if we are unable to determine your identity or affiliation, your request may be ignored.
+In your email, please include your name, affiliation, and home page (if we do not recognize each other). This information is required only for verification purposes. Please note that if we are unable to determine your identity or affiliation, your request may be ignored.
 
-2. If you are currently in industry (including research labs):
+If your papers or articles use our dataset or our tool, please cite our CCS 2021 paper.
 
-   Please send us an email from your company's email account. In the email, please briefly introduce yourself (e.g., name and title - in case we don't know each other) and your company.
+## For Industry Researchers:
+If you are currently in industry (including research labs), please send us an email from your company's email account.
 
-   In the email, please include a certified letter (PDF format) on official letterhead. The supporting letter needs to acknowledge the "VulScope" project at Fudan University and clearly state the reason for requesting the dataset and source code. Also, confirm that the dataset will not be shared with others without our permission.
+In the email, please briefly introduce yourself (e.g., name and title - in case we don't know each other) and your company.
 
-3. We emphasize that we will ignore emails that do not follow the above instructions. Please note that we may disclose on this page the list of universities, research labs, and companies that have requested our datasets. Again, you are not allowed to share any samples from our dataset with others without our permission. Sending us an email requesting access to our datasets implies that you are aware of and agree to the above policy.
+## Mail Content:
+In the email, please include a justification letter (PDF format) on official letterhead. The justification letter needs to acknowledge the "VulScope" project from Fudan University and clearly state the reason for requesting the dataset or source code. Also, confirm that the dataset or source code will not be shared with others without our permission.
 
 
-Please send your request emails to Yuan Zhang (yuanxzhang@fudan.edu.cn) AND Dr. Jiarun Dai (14307130122@fudan.edu.cn) with "[VulScope & Dataset Request]" in the subject.
+We emphasize that we will ignore emails that do not follow the above instructions. Please note that we may disclose on the homepage of VulScope(https://seclab-fudan.github.io/VulScope) the list of universities, research labs, and companies that have requested our datasets. Again, you are not allowed to share any samples from our source code/dataset with others without our permission. Sending us an email requesting access to our source code/dataset implies that you are aware of and agree to the above policy.
 
 
 
