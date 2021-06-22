@@ -76,7 +76,7 @@ In the email, please briefly introduce yourself (e.g., name and title - in case 
 In the email, please include a justification letter (PDF format) on official letterhead. The justification letter needs to acknowledge the "VulScope" project from Fudan University and clearly state the reason for requesting the dataset or source code. Also, confirm that the dataset or source code will not be shared with others without our permission.
 
 
-We emphasize that we will ignore emails that do not follow the above instructions. Please note that we may disclose on the homepage of VulScope(https://seclab-fudan.github.io/VulScope) the list of universities, research labs, and companies that have requested our datasets. Again, you are not allowed to share any samples from our source code/dataset with others without our permission. Sending us an email requesting access to our source code/dataset implies that you are aware of and agree to the above policy.
+We emphasize that we will ignore emails that do not follow the above instructions. Please note that we may disclose on the [homepage](https://seclab-fudan.github.io/VulScope) of VulScope the list of universities, research labs, and companies that have requested our datasets. Again, you are not allowed to share any samples from our source code/dataset with others without our permission. Sending us an email requesting access to our source code/dataset implies that you are aware of and agree to the above policy.
 
 
 
