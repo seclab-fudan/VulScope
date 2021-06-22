@@ -3,16 +3,18 @@ layout: default
 title: VulScope
 ---
 
-# VulScope
+## VulScope: Facilitating Vulnerability Assessment through PoC Migration
 
 ## Research Problem
 
-A public vulnerability report usually contains vulnerable software versions, the severity of the vulnerability, and even the Proof-of-Concept (PoC) input to  reproduce  the  failure  pertaining  to  the  vulnerability. Recent research<sup>[[1,2,3]](#reference)</sup> shows that incomplete and incorrect vulnerable software versions are prevalent in vulnerability reports, making users of under-reported vulnerable versions at risk. Existing techniques such as code clone detection and patch presence testing could potentially be applied to verifying a vulnerability on different software versions. However, these static analysis techniques might generate high false positives because they cannot confirm the existence of the vulnerability through a PoC that triggers the target vulnerability and forces the program to accidentally terminate. 
+A public vulnerability report usually contains vulnerable software versions, the severity of the vulnerability, and even the Proof-of-Concept (PoC) input to  reproduce  the  failure  pertaining  to  the  vulnerability. However, recent research<sup>[[1,2,3]](#reference)</sup> shows that incomplete and incorrect vulnerable software versions are prevalent in vulnerability reports, making users of under-reported vulnerable versions at risk. 
 
-In this work, we introduce a systematic, automated approach to assessing the under-claimed vulnerable versions for a reported vulnerability. Technically, taking a PoC for the reference vulnerable version as input, we utilize a fuzzing-based method to generate a new PoC for the target version to trigger the same vulnerability. We implement this idea as an automated tool, named VulScope. Using 30 real-world CVEs, VulScope successfully identify **330**
+Existing techniques such as code clone detection and patch presence testing could potentially be applied to verifying a vulnerability on different software versions. However, these static analysis techniques might generate high false positives because they cannot confirm the existence of the vulnerability through a PoC that triggers the target vulnerability.
+
+In this work, we introduce a systematic, automated approach to assessing the under-reported vulnerable versions for a reported vulnerability. Technically, taking a PoC for the reference vulnerable version as input, we utilize a fuzzing-based method to generate a new PoC for the target version to trigger the same vulnerability. We implement this idea as an automated tool, named VulScope. On 30 real-world CVEs, VulScope successfully identify **330**
 versions of software that MITRE/NIST fails to report as vulnerable.
 
-We plan to release the source code and datasets of VulScope, see [our sharing policy](#open-source-protocol) for more details.
+We plan to release the [source code](#source-code) and [datasets](#dataset) of VulScope, see [our sharing policy](#open-source-protocol) for more details.
 
 ## Approach Overview
 
@@ -32,7 +34,7 @@ In particular, VulScope runs in the following steps:
 
 6. All the mutated inputs are evaluated with the crash triage and given scores based on the similarity between their traces and *Tref*. If none of the seeds triggers the target vulnerability, they are inserted into a prioritization queue according to their scores. The seed with the highest score will be selected for next round of mutation (goto Step-4).
 
-![image-20210615153253528](./img/image-20210615153253528.png)
+![image-20210615153253528](./img/overview-210616-2.png)
 
 ## Paper Info
 
@@ -42,49 +44,58 @@ In particular, VulScope runs in the following steps:
 
 To appear in the 28th ACM Conference on Computer and Communications Security (CCS), Seoul, South Korea, November 14-19, 2021 (coming soon).
 
-
-
+## Citation
+```
+@inproceedings{vulscope-CCS-2021,
+    author={J. Dai and Y. Zhang and H. Xu and H. Lyu and Z. Wu and X. Xing and M. Yang},
+    booktitle={Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security},
+    title={Facilitating Vulnerability Assessment through PoC Migration},
+    year={2021},
+}
+```
 ## Open Source Protocol
 
-> This protocol is referenced from [Android Malware Genome Project](http://www.malgenomeproject.org/policy.html)
+Recent research shows that, public vulnerability reports (e.g., those achieved by MITRE/NIST) usually contain incomplete information about the software's vulnerable versions, making users of under-reported vulnerable versions at risk. In light of this, we are glad to release our tool VulScope and dataset for vulnerability assessment to the community, to better understand or mitigate this problem. However, to avoid misuse of our tool and dataset, we apply simple authentication to verify the identity of the user who wants to request access to our source code and dataset. So, if you are interested in VulScope and want to obtain access to our source code and dataset, please read the following instructions and send your request email to Yuan Zhang (yuanxzhang@fudan.edu.cn) and Jiarun Dai (jrdai14@fudan.edu.cn).
 
-In order to further complement the incomplete vulnerability reports in existing vulnerability databases (e.g. MITRE) and to make them better understood and implemented by the research community, we are pleased to release our tool VulScope and dataset to the community. However, in order to avoid misuse of our tool and dataset, we feel that some sort of authentication is necessary to verify the identity of the user or to require the necessary justification, rather than making the dataset fully public. For this reason, if you are interested in obtaining access to our datasets, please read the following instructions carefully before sending us an email.
+**=======  Instructions about Request Email =======**
 
-1. If you are currently in academia:
+**For Academic Researchers:**
 
-   If you are a student (or postdoc), please have your advisor (or host) send us an access email. If you are a faculty member, please send us an email from your university email account.
+If you are a student(or postdoc), please have your advisor (or host) send us an access email. If you are a faculty member, please send us an email from your university email account.
 
-   In your email, please include your name, affiliation, and home page (if we do not recognize each other). This information is required only for verification purposes. Please note that if we are unable to determine your identity or affiliation, your request may be ignored.
+In your email, please include your name, affiliation, and home page (if we do not recognize each other). This information is required only for verification purposes. Please note that if we are unable to determine your identity or affiliation, your request may be ignored.
 
-2. If you are currently in industry (including research labs):
+If your papers or articles use our dataset or our tool, please cite our CCS 2021 paper.
 
-   Please send us an email from your company's email account. In the email, please briefly introduce yourself (e.g., name and title - in case we don't know each other) and your company.
+**For Industry Researchers:**
 
-   In the email, please include a certified letter (PDF format) on official letterhead. The supporting letter needs to acknowledge the "VulScope" project at Fudan University and clearly state the reason for requesting the dataset and source code. Also, confirm that the dataset will not be shared with others without our permission.
+If you are currently in industry (including research labs), please send us an email from your company's email account.
 
-3. We emphasize that we will ignore emails that do not follow the above instructions. Please note that we may disclose on this page the list of universities, research labs, and companies that have requested our datasets. Again, you are not allowed to share any samples from our dataset with others without our permission. Sending us an email requesting access to our datasets implies that you are aware of and agree to the above policy.
+In the email, please briefly introduce yourself (e.g., name and title - in case we don't know each other) and your company.
+
+**Mail Content:**
+
+In the email, please include a justification letter (PDF format) on official letterhead. The justification letter needs to acknowledge the "VulScope" project from Fudan University and clearly state the reason for requesting the dataset or source code. Also, confirm that the dataset or source code will not be shared with others without our permission.
 
 
-Please send your request emails to Yuan Zhang (yuanxzhang@fudan.edu.cn) AND Dr. Jiarun Dai (14307130122@fudan.edu.cn) with "[VulScope & Dataset Request]" in the subject.
-
+We emphasize that we will ignore emails that do not follow the above instructions. Please note that we may disclose on the homepage of VulScope(https://seclab-fudan.github.io/VulScope) the list of universities, research labs, and companies that have requested our datasets. Again, you are not allowed to share any samples from our source code/dataset with others without our permission. Sending us an email requesting access to our source code/dataset implies that you are aware of and agree to the above policy.
 
 
 
 ## Dataset
 
-We randomly selected 30 real-world CVE reports from the National Vulnerability Database (NVD). These 30 CVE reports cover 6 broadly adopted software  in  the  user space,  covering  6  types  of  vulnerabilities: heap OOB, stack OOB, divide-by-zero, segmentation fault, integer overflow, and null pointer dereference. To evaluate our tool, we choose 500 unpatched versions listed in Table 1, consisting of 30 reference versions and 470 target versions.
+When evaluating the performance of VulScope, we randomly selected 30 real-world CVE reports from the National Vulnerability Database (NVD). These 30 CVEs influence 6 broadly adopted software  in  the  user space,  covering  6  types  of  vulnerabilities: heap OOB, stack OOB, divide-by-zero, segmentation fault, integer overflow, and null pointer dereference. As shown in the following table, the dataset consists of 30 reference CVE-version pairs and 470 target CVE-version pairs.
 
-We also prepared the necessary binaries for testing our tool in this dataset and we will publish them in a [zenodo repository](). 
+We plan to open source this dataset, containing the inputs needed by VulScope to run tests on these CVE-version pairs. Following our sharing protocol, you can get the dataset in a public [zenodo repository](). 
 
 <div align="center">
-<img src="./img/image-20210611233459167.png" style="zoom:50%;" />
+<img src="./img/img-20210616.png"/>
 </div>
 
 
 ## Source Code
 
-We will make the source code of all modules of VulScope publicly available.We also provide two dockers, one for compiling the necessary binaries and the other for using our tool VulScope. you can find them [here]().
-
+We also plan to make the source code of all modules of VulScope publicly available. For ease of use, we also provide the docker images in which you can directly run our tool. You can get the source code and docker images from a public [zenodo repository](), following our sharing policy.
 
 
 ## Team Members
