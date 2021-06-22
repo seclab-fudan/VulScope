@@ -3,8 +3,6 @@ layout: default
 title: VulScope
 ---
 
-## VulScope: Facilitating Vulnerability Assessment through PoC Migration
-
 ## Research Problem
 
 A public vulnerability report usually contains vulnerable software versions, the severity of the vulnerability, and even the Proof-of-Concept (PoC) input to  reproduce  the  failure  pertaining  to  the  vulnerability. However, recent research<sup>[[1,2,3]](#reference)</sup> shows that incomplete and incorrect vulnerable software versions are prevalent in vulnerability reports, making users of under-reported vulnerable versions at risk. 
@@ -47,7 +45,7 @@ To appear in the 28th ACM Conference on Computer and Communications Security (CC
 ## Citation
 ```
 @inproceedings{vulscope-CCS-2021,
-    author={J. Dai and Y. Zhang and H. Xu and H. Lyu and Z. Wu and X. Xing and M. Yang},
+    author={Jiarun Dai and Yuan Zhang and Hailong Xu and Haiming Lyu and Zicheng Wu and Xinyu Xing and Min Yang},
     booktitle={Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security},
     title={Facilitating Vulnerability Assessment through PoC Migration},
     year={2021},
@@ -86,7 +84,7 @@ We emphasize that we will ignore emails that do not follow the above instruction
 
 When evaluating the performance of VulScope, we randomly selected 30 real-world CVE reports from the National Vulnerability Database (NVD). These 30 CVEs influence 6 broadly adopted software  in  the  user space,  covering  6  types  of  vulnerabilities: heap OOB, stack OOB, divide-by-zero, segmentation fault, integer overflow, and null pointer dereference. As shown in the following table, the dataset consists of 30 reference CVE-version pairs and 470 target CVE-version pairs.
 
-We plan to open source this dataset, containing the inputs needed by VulScope to run tests on these CVE-version pairs. Following our sharing protocol, you can get the dataset in a public [zenodo repository](). 
+We plan to open source this dataset, containing the inputs needed by VulScope to run tests on these CVE-version pairs. Following our sharing protocol, you can get the dataset from [here](https://zenodo.org/record/4954467#.YNG5OZMzb0o). 
 
 <div align="center">
 <img src="./img/img-20210616.png"/>
@@ -95,7 +93,7 @@ We plan to open source this dataset, containing the inputs needed by VulScope to
 
 ## Source Code
 
-We also plan to make the source code of all modules of VulScope publicly available. For ease of use, we also provide the docker images in which you can directly run our tool. You can get the source code and docker images from a public [zenodo repository](), following our sharing policy.
+We also plan to make the source code of all modules of VulScope publicly available. For ease of use, we also provide the docker images in which you can directly run our tool. You can get the source code and docker images from [here](https://zenodo.org/record/4954304#.YNHQIZMzb0o), following our sharing policy.
 
 
 ## Team Members
