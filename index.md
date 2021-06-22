@@ -24,7 +24,7 @@ In particular, VulScope runs in the following steps:
 
 2. VulScope performs cross-version trace alignmenton *T<sub>ref</sub>* and *T<sub>target</sub>* to get the aligned functions between the two traces.
 
-3. If a crash is observed on the target version, VulScope uses **crash triage** to verify whether this crash is triggered by the target vulnerability.
+3. If a crash is observed on the target version, VulScope uses crash triage to verify whether this crash is triggered by the target vulnerability.
 
 4. Based on the aligned cross-version execution traces, VulScope performs execution detours reasoning to locate the critical variables that cause these execution detours.
 
